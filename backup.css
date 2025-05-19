@@ -1,0 +1,10 @@
+/* Backup styles for essential layout */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.min-h-screen { min-height: 100vh; }
+.flex-grow { flex: 1 0 auto; }
+.bg-black { background-color: #000000; }
+.text-white { color: #ffffff; }
+.p-4 { padding: 1rem; }
+.py-8 { padding: 2rem 0; }
+.text-center { text-align: center; }
