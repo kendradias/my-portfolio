@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Code, Mail, FileText, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
+import { Code, Mail, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
+// import { ProjectImage } from './ImageViewer';
+import { MultiImageProject } from './MultiImageProject';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -198,11 +200,16 @@ const Portfolio = () => {
               {/* Project 1 */}
               <div style={pixelBorder}>
                 <div className="p-4">
-                  <div className="h-40 mb-4 overflow-hidden" style={{...pixelBorder, border: '2px solid #000'}}>
-                    <img 
-                      src="/squishmart.png" 
-                      alt="Squishmart E-Commerce Platform Screenshot" 
-                      className="w-full h-full object-cover"
+                  <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
+                    {/* Replace with ProjectImage component */}
+                    <MultiImageProject
+                      images={[
+                        { src: "/squishmart.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                        { src: "/squishmart2.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                        { src: "/squishmartmodal.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                        { src: "/hpsquish.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                        { src: "/orderhistory.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                      ]} 
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Squishmallow E-Commerce Platform</h3>
@@ -214,7 +221,7 @@ const Portfolio = () => {
                     <span className="px-2 py-1 bg-yellow-100 text-purple-800 text-sm">Bootstrap</span>
                   </div>
                   <div className="flex space-x-3">
-                    <a href="#" className="text-blue-600 hover:underline flex items-center">
+                    <a href="https://youtu.be/U1mi60xbHJY" className="text-blue-600 hover:underline flex items-center">
                       <Code size={16} className="mr-1" /> View Demo
                     </a>
                     <a href="https://github.com/ryan-m-burns/SquishMart.git" className="text-blue-600 hover:underline flex items-center">
@@ -227,11 +234,15 @@ const Portfolio = () => {
               {/* Project 2 */}
               <div style={pixelBorder}>
                 <div className="p-4">
-                  <div className="h-40 bg-gray-300 mb-4 flex items-center justify-center">
-                  <img 
-                      src="/jobtracker.png" 
-                      alt="Job Tracker Application Screenshot" 
-                      className="w-full h-full object-cover"
+                  <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
+                  <MultiImageProject
+                    images={[ 
+                      { src: "/jobtracker.png", alt: "Job Tracker Application Homepage" },
+                      { src: "/jobform.png", alt: "Job Tracker Job Application Form" },
+                      { src: "/applicationlist.png", alt: "Job Tracker Application List" }, 
+                      { src: "/companyform.png", alt: "Job Tracker Company Form" },   
+                      { src: "/companylist.png", alt: "Job Tracker Watchlist" },   
+                    ]}
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Job Tracker App</h3>
@@ -256,11 +267,14 @@ const Portfolio = () => {
               {/* Project 3 */}
               <div style={pixelBorder}>
                 <div className="p-4">
-                <div className="h-40 mb-4 overflow-hidden" style={{...pixelBorder, border: '2px solid #000'}}>
-                  <img 
-                    src="/hungryhero.png" 
-                    alt="Hungry Hero Project Screenshot" 
-                    className="w-full h-full object-cover"
+                  <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
+                  <MultiImageProject
+                    images={[     
+                      { src: "/hungryhero.png", alt: "Hungry Hero Game" },
+                      { src: "/gameentry.png", alt: "Hungry Hero Game Entry" },
+                      { src: "/gameinstr.png", alt: "Hungry Hero Game Instructions Screen" },  
+                      { src: "/gameover.png", alt: "Hungry Hero Game Over" },    
+                    ]}
                   />
                 </div>
                   <h3 className="text-xl font-bold mb-2">Hungry Hero - A PacMan Style Game</h3>
@@ -285,11 +299,13 @@ const Portfolio = () => {
               {/* Project 4 */}
               <div style={pixelBorder}>
                 <div className="p-4">
-                  <div className="h-40 mb-4 overflow-hidden" style={{...pixelBorder, border: '2px solid #000'}}>
-                    <img 
-                      src="/financetracker.png" 
-                      alt="Finance Tracker Screenshot" 
-                      className="w-full h-full object-cover"
+                  <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
+                  <MultiImageProject
+                    images={[     
+                      { src: "/expensetracker.png", alt: "Expense Tracker App Screenshot" },
+                      { src: "/addexpense.png", alt: "Add Expense" },
+                      { src: "/expenses.png", alt: "Expense List View" },    
+                    ]}
                     />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Budget Tracker</h3>
@@ -414,73 +430,6 @@ const Portfolio = () => {
               </div>
             </div>
           );
-      case 'resume':
-        return (
-          <div className="p-6 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Resume</h2>
-            <div className="mb-6 flex justify-center">
-              <a 
-                href="#" 
-                className="px-4 py-2 bg-blue-500 text-white flex items-center"
-                style={pixelBorder}
-              >
-                <FileText size={18} className="mr-2" /> Download Full Resume
-              </a>
-            </div>
-            
-            <div className="mb-8" style={pixelBorder}>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">Education</h3>
-                <div className="mb-6">
-                  <div className="flex justify-between mb-1">
-                    <h4 className="font-bold">Software Systems Developer</h4>
-                    <span>2024-2025</span>
-                  </div>
-                  <p>BCIT (British Colombia Institute of Technology)</p>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <h4 className="font-bold">Music Technology</h4>
-                    <span>2015-2016</span>
-                  </div>
-                  <p>Douglas College</p>
-                </div>
-              </div>
-            </div>
-            
-            <div style={pixelBorder}>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">Work Experience</h3>
-                <div className="mb-6">
-                  <div className="flex justify-between mb-1">
-                    <h4 className="font-bold">Senior Web Developer</h4>
-                    <span>2022 - Present</span>
-                  </div>
-                  <p className="text-gray-700 mb-2">Company Name</p>
-                  <ul className="list-disc pl-5">
-                    <li>Led development team of 5 engineers</li>
-                    <li>Implemented CI/CD pipeline that reduced deployment time by 60%</li>
-                    <li>Redesigned architecture to improve application performance</li>
-                    <li>Mentored junior developers and conducted code reviews</li>
-                  </ul>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <h4 className="font-bold">Full Stack Developer</h4>
-                    <span>2019 - 2022</span>
-                  </div>
-                  <p className="text-gray-700 mb-2">Previous Company</p>
-                  <ul className="list-disc pl-5">
-                    <li>Developed responsive web applications for clients</li>
-                    <li>Managed database architecture and optimization</li>
-                    <li>Implemented RESTful APIs for frontend consumption</li>
-                    <li>Collaborated with design team to implement UI/UX improvements</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
       default:
         return <div>Page not found</div>;
     }

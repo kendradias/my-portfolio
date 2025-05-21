@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Kendra Dev",
   description: "Kendra Dias - Software Developer Portfolio",
   icons: {
-    icon: '/favicon.gif',
+    icon: '/star.png', // Use PNG as base for crawlers
   },
 };
 
@@ -28,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.gif" type="image/gif" />
+        {/* Fallback favicon */}
+        <link id="favicon" rel="icon" href="/star.png" type="image/png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
