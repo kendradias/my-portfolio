@@ -73,7 +73,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <h1 className="text-4xl font-bold mb-2">Kendra Dias</h1>
+            <h1 className="text-4xl font-bold mb-2 text-black dark:text-white">Kendra Dias</h1>
             <div className="h-6 mb-6">
               <span className="text-xl text-blue-600">{typing}<span className="animate-pulse">|</span></span>
             </div>
@@ -467,7 +467,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 font-mono">
+    <div className="flex flex-col min-h-screen bg-white text-black font-mono">
+    {/* Override the CSS variables with inline styles */}
+    <style jsx global>{`
+      :root {
+        --background: #ffffff !important;
+        --foreground: #000000 !important;
+      }
+    `}</style>
       {/* Header */}
       <header className="bg-black text-white p-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
