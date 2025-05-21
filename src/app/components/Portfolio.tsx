@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Monitor, User, Code, Briefcase, Mail, FileText, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
+import { Code, Mail, FileText, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -328,7 +328,7 @@ const Portfolio = () => {
                   {submitted ? (
                     <div className="text-green-600 p-4 text-center">
                       <p className="mb-2 font-bold">Message Sent!</p>
-                      <p>Thanks for reaching out. I'll get back to you soon.</p>
+                      <p>Thanks for reaching out. I&apos;ll get back to you soon.</p>
                       <button 
                         onClick={() => setSubmitted(false)}
                         className="mt-4 px-4 py-2 bg-blue-500 text-white"
@@ -339,9 +339,9 @@ const Portfolio = () => {
                     </div>
                   ) : (
                     <form 
-                      action="https://formspree.io/f/YOUR_FORMSPREE_ID" 
+                      action="https://formspree.io/f/mpwdnzqp" 
                       method="POST"
-                      onSubmit={(e) => {
+                      onSubmit={() => {
                         // This will show success message after form submits
                         setTimeout(() => setSubmitted(true), 1000);
                       }}
