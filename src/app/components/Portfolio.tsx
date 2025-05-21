@@ -147,7 +147,7 @@ const Portfolio = () => {
               </div>
             </div>
             
-            <div style={pixelBorder}>
+            <div className="mb-8" style={pixelBorder}>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Experience</h3>
                 <div className="mb-6">
@@ -165,6 +165,26 @@ const Portfolio = () => {
                   </div>
                   <p className="text-gray-700">Independent Contractor</p>
                   <p className="mt-2">Developed and maintained E-Commerce websites, implemented responsive designs, integrated third-party APIs, and data persistance using Relational and NoSql databases.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mb-8" style={pixelBorder}>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-4">Education</h3>
+                <div className="mb-6">
+                  <div className="flex justify-between mb-1">
+                    <h4 className="font-bold">Software Systems Developer</h4>
+                    <span>2024-2025</span>
+                  </div>
+                  <p>BCIT (British Colombia Institute of Technology)</p>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <h4 className="font-bold">Music Technology</h4>
+                    <span>2015-2016</span>
+                  </div>
+                  <p>Douglas College</p>
                 </div>
               </div>
             </div>
