@@ -23,18 +23,28 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
-          cache: 'npm'
+            node-version: "20"
+            cache: 'npm'
       - name: Install dependencies
         run: npm ci
       - name: Build with Next.js
-        run: npm run build
+        run: |
+          echo "Running Next.js build..."
+          npm run build || (echo "Build failed - check logs above for errors" && exit 1)
       - name: Fix HTML
-        run: node fix-html.js
+        run: |
+          echo "Running fix-html script..."
+          node -e "try { require('./fix-html.js'); } catch(e) { console.error('Error in fix-html.js:', e); process.exit(1); }"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3  # Updated from v2 to v3
         with:
           path: ./out
+      - name: Prepare Next.js config
+        run: |
+            echo "Checking Next.js configuration..."
+            cat next.config.ts
+            # Convert TypeScript config to JS if needed
+            npx tsc next.config.ts --allowJs --outDir .
 
   deploy:
     environment:
