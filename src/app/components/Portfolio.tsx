@@ -73,7 +73,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <h1 className="text-4xl font-bold mb-2 text-black dark:text-white">Kendra Dias</h1>
+            <h1 className="text-4xl font-bold mb-2">Kendra Dias</h1>
             <div className="h-6 mb-6">
               <span className="text-xl text-blue-600">{typing}<span className="animate-pulse">|</span></span>
             </div>
