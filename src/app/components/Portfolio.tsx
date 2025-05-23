@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Code, Mail, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
+import { Code, Mail, Github, Linkedin, Twitter, Gamepad2, Play } from 'lucide-react';
 import { MultiImageProject } from './MultiImageProject';
 
 const Portfolio = () => {
@@ -200,7 +200,6 @@ const Portfolio = () => {
               <div style={pixelBorder}>
                 <div className="p-4">
                   <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
-                    {/* Replace with ProjectImage component */}
                     <MultiImageProject
                       images={[
                         { src: "/squishmart.png", alt: "Squishmart E-Commerce Platform Screenshot" },
@@ -221,7 +220,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex space-x-3">
                     <a href="https://youtu.be/U1mi60xbHJY" className="text-blue-600 hover:underline flex items-center">
-                      <Code size={16} className="mr-1" /> View Demo
+                      <Play size={16} className="mr-1" /> View Demo
                     </a>
                     <a href="https://github.com/ryan-m-burns/SquishMart.git" className="text-blue-600 hover:underline flex items-center">
                       <Github size={16} className="mr-1" /> GitHub
@@ -254,7 +253,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex space-x-3">
                     <a href="https://youtu.be/9ZNCpbRQSDw" className="text-blue-600 hover:underline flex items-center">
-                      <Code size={16} className="mr-1" /> View Demo
+                      <Play size={16} className="mr-1" /> View Demo
                     </a>
                     <a href="https://github.com/kendradias/job-tracker.git" className="text-blue-600 hover:underline flex items-center">
                       <Github size={16} className="mr-1" /> GitHub
@@ -318,7 +317,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex space-x-3">
                     <a href="https://pokedex-beta-peach.vercel.app/" className="text-blue-600 hover:underline flex items-center">
-                    <Gamepad2 size={16} className="mr-1" /> View Site
+                    <Code size={16} className="mr-1" /> View Site
                     </a>
                     <a href="https://github.com/kendradias/pokedex" className="text-blue-600 hover:underline flex items-center">
                       <Github size={16} className="mr-1" /> GitHub
@@ -349,7 +348,7 @@ const Portfolio = () => {
                   </div>
                   <div className="flex space-x-3">
                     <a href="https://youtube.com/shorts/PJHojFbDEgU" className="text-blue-600 hover:underline flex items-center">
-                      <Code size={16} className="mr-1" /> View Demo
+                      <Play size={16} className="mr-1" /> View Demo
                     </a>
                     {/* <a href="#" className="text-blue-600 hover:underline flex items-center">
                       <Github size={16} className="mr-1" /> GitHub
