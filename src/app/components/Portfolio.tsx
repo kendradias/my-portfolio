@@ -202,11 +202,11 @@ const Portfolio = () => {
                   <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
                     <MultiImageProject
                       images={[
-                        { src: "/squishmart.png", alt: "Squishmart E-Commerce Platform Screenshot" },
-                        { src: "/squishmart2.png", alt: "Squishmart E-Commerce Platform Screenshot" },
-                        { src: "/squishmartmodal.png", alt: "Squishmart E-Commerce Platform Screenshot" },
-                        { src: "/hpsquish.png", alt: "Squishmart E-Commerce Platform Screenshot" },
-                        { src: "/orderhistory.png", alt: "Squishmart E-Commerce Platform Screenshot" },
+                        { src: "/squishmart.png", alt: "Squishmart E-Commerce Platform Screenshot - Homepage" },
+                        { src: "/squishmart2.png", alt: "Squishmart E-Commerce Platform Screenshot - Homepage" },
+                        { src: "/squishmartmodal.png", alt: "Shop and Cart Modal" },
+                        { src: "/hpsquish.png", alt: "Squishmart Brand View - Harry Potter" },
+                        { src: "/orderhistory.png", alt: "Order History List View" },
                       ]} 
                     />
                   </div>
