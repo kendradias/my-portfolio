@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Code, Mail, Github, Linkedin, Twitter, Gamepad2 } from 'lucide-react';
-// import { ProjectImage } from './ImageViewer';
 import { MultiImageProject } from './MultiImageProject';
 
 const Portfolio = () => {
@@ -297,6 +296,38 @@ const Portfolio = () => {
               </div>
               
               {/* Project 4 */}
+              <div style={pixelBorder}>
+                <div className="p-4">
+                  <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
+                  <MultiImageProject
+                    images={[     
+                      { src: "/allpokemon.png", alt: "Screenshot of Pokedex for Generations 1-9" },
+                      { src: "/pokedesc.png", alt: "Pokemon Description Page" },
+                      { src: "/pokestat.png", alt: "Pokemon Stat Page" },  
+                      { src: "/pokesearch.png", alt: "Screenshot of Search by name functionality" },    
+                    ]}
+                  />
+                </div>
+                  <h3 className="text-xl font-bold mb-2">Pokedex</h3>
+                  <p className="mb-3">A cross-platform Pokédex application built with React Native, Expo, and TypeScript that features real-time search, infinite scrolling, and detailed Pokémon information pages with responsive design optimized for mobile, web, and desktop. The app includes RESTful API integration, progressive loading, and seamless navigation across 1,008 Pokémon from generations 1-9.</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-2 py-1 bg-blue-100 text-blue-800 text-sm">Typescript</span>
+                    <span className="px-2 py-1 bg-blue-100 text-yellow-800 text-sm">React Native</span>
+                    <span className="px-2 py-1 bg-purple-100 text-purple-800 text-sm">Expo</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-800 text-sm">PokéAPI (RESTful API)</span>
+                  </div>
+                  <div className="flex space-x-3">
+                    <a href="https://pokedex-beta-peach.vercel.app/" className="text-blue-600 hover:underline flex items-center">
+                    <Gamepad2 size={16} className="mr-1" /> View Site
+                    </a>
+                    <a href="https://github.com/kendradias/pokedex" className="text-blue-600 hover:underline flex items-center">
+                      <Github size={16} className="mr-1" /> GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Project 5 */}
               <div style={pixelBorder}>
                 <div className="p-4">
                   <div className="h-40 mb-4 overflow-hidden relative group" style={{...pixelBorder, border: '2px solid #000'}}>
